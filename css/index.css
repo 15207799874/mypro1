@@ -31,9 +31,9 @@ header{
 	padding:4px;
 }
 
-.border{
+/* .border{
 	border:solid 1px red;
-}
+} */
 #logo{
 	border-radius:30px;
 	margin-left:30px;
@@ -92,6 +92,11 @@ header{
 	80% {opacity:0;}
 	100% {opacity:1}	
 } 
+@keyframes hr2
+{
+	from {width:0%;}
+	to{width:30%;}	
+}
 @keyframes c2_content{
 	0% {left:10px}
 	50% {left:80px}
@@ -109,6 +114,8 @@ header{
 	z-index:1000;
 }
 
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~第一页 */
 .content100{
 	height:100%;
 	width:100%;	
@@ -118,7 +125,6 @@ header{
 #my{
 	border-radius:75px 75px;
 }
-/* ~~~~~~~~~~~~~~~~~~~~~~~~第一页 */
 
 .c1{
 	height: 60%;
@@ -129,9 +135,6 @@ header{
 	margin-left:-30%;
 	overflow:hidden;
 	animation:mytwo 3s;
-	animation-timing-function:ease;	
-	-webkit-animation:mytwo 3s;
-	-webkit-animation-timing-function:ease;
 }
 .c1 div{	
 	text-align:center;
@@ -148,7 +151,7 @@ header{
 	margin:auto;
 	width:60%;
 	border:solid 1px gray;
-	animation:mythree 2.5s;
+	animation:mythree 2s;
 }
 .c1 h5{
 	margin:auto;
@@ -156,28 +159,42 @@ header{
 	display:none;
 }
 /* ～～～～～～～～～～～～～～第二页 */
+#content2{
+	display:none;
+}
+#hr2{
+	margin:auto;
+	height:2px;
+	width:30%;
+	background-color:red;	
+	animation:hr2 1s;
+}
 .c2{
-	height:60%;
+	height:75%;
 	width:50%;
 	position:absolute;
-	top:25%;
+	top:15%;
 	left:50%;
 	margin-left:-25%;	
+	text-align:center;
+	line-height:2em;
 }
 .c2 h1{
 	text-align:center;
 	margin:auto;	
 }
+
 #c2_content{
 	margin-top:10%;
-	height:40%;
+	height:30%;
 	border-radius:20px;
-	background-color:#787878;
+	background-color:#a0a0b4;
 }
 #c2_content a{
 	width:24%;
 	display:inline-block;
 	text-align:center;
+	font-size:1.5em;
 	
 }
 #c2_content div{
@@ -215,10 +232,16 @@ header{
 	margin-top:10px;
 	animation:c2_content 1.5s;
 }
-/* #c2_btn1{
-	width:60px;
-	height:60px;
-	margin:auto;
-	border-radius:30px;	
-	} */
+
+#c2_p{
+	width:100%;
+	height:45%;
+	border:15px solid;
+	border-image:url(../image/border.png) 30 30 round;	
+}
+#c2_p p{
+	line-height:3em;
+	display:none;
+}
+
 
