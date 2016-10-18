@@ -22,21 +22,26 @@ header{
 	filter:alpha(opacity=100); /* For IE8 and earlier */
 }
 .t1{
+	display:inline-block;
 	font-size:2em;
-	padding:5px;
-	line-height:2em;
+	font-weight:900;
+	color:#7f7f7f;
+	height:55px;
+	line-height:55px;
+	text-shadow: 2px 2px 5px #880000;
 }
 .t2{
 	font-size:1.5em;
 	padding:4px;
 }
 
-/* .border{
+/*  .border{
 	border:solid 1px red;
-} */
+}  */
 #logo{
 	border-radius:30px;
 	margin-left:30px;
+	vertical-align: bottom;
 }
 #logo:hover{
 	box-shadow: 0px 0px 5px blue;
@@ -58,8 +63,8 @@ header{
 }
 @keyframes mytwo
 {
-	from {top:40%;}
-	to {top:25%;}
+	from {top:100px;}
+	to {top:0px;}
 }
 @-webkit-keyframes mytwo 
 {
@@ -95,13 +100,17 @@ header{
 @keyframes hr2
 {
 	from {width:0%;}
-	to{width:30%;}	
+	to{width:15%;}	
 }
-@keyframes c2_content{
-	0% {left:10px}
-	50% {left:80px}
-	51% {left:-80px}
-	100% {left:10px}
+@keyframes c2_logo{
+	0% {background-position:10px}
+	50% {background-position:100px}
+	51% {background-position:-80px}
+	100% {background-position:10px}
+}
+@keyframes rotateY{
+	form {transform: rotateY(0deg); -webkit-transform: rotateY(0deg); }
+	to{transform: rotateY(360deg); -webkit-transform: rotateY(360deg); }
 }
 /* 动画 **********************************************************************/
 #fixnav{
@@ -114,18 +123,53 @@ header{
 	z-index:1000;
 }
 
+#fixdemo{
+	position:fixed;
+    display:none;
+	width:150px;
+    top:150px;
+	left:100px;	
+	z-index:1000;
+	box-shadow: 10px 10px 5px #888888;
+}
+/* ****************modal */
+#modal-body-img{
+	height:120px;
+}
+#modal-body-img li{
+	
+	width:32%;
+	text-align:center;
+}
+#modal-body-img img{
+	width:85px;
+	height:100px;
+	transition: 0.5s; 
+		
+}
+#modal-body-img img:hover{
+	width:100px;
+	height:120px;
+	
+	
+	
+}
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~第一页 */
 .content100{
 	height:100%;
 	width:100%;	
-	position:relative;		
+	position:relative;			
+}
+#content1{
+	animation:mytwo 3s;
 }
 
 #my{
 	border-radius:75px 75px;
+	animation:rotateY 2s;
+	box-sizing: border-box;
 }
-
 .c1{
 	height: 60%;
 	width: 60%;
@@ -134,7 +178,7 @@ header{
 	left: 50%;
 	margin-left:-30%;
 	overflow:hidden;
-	animation:mytwo 3s;
+	//animation:mytwo 3s;
 }
 .c1 div{	
 	text-align:center;
@@ -165,7 +209,7 @@ header{
 #hr2{
 	margin:auto;
 	height:2px;
-	width:30%;
+	width:15%;
 	background-color:red;	
 	animation:hr2 1s;
 }
@@ -207,6 +251,7 @@ header{
 	border-radius:50%;	
 	transition:1.5s;
 }
+
 #c2_content div:hover{
 	display:inline-block;
 	position:relative;
@@ -217,20 +262,38 @@ header{
 	border-radius:50%;
 	background-color:white;
 	overflow:hidden;
+	animation:c2_logo 1.5s;
+}
+#c2_logo1{
+    background:url(../image/education.png);
+    background-repeat:no-repeat;
+	background-position:10px 10px;
+    //background-size:100% 100%;
+    background-origin:content-box;	
+}
+#c2_logo2{
+    background:url(../image/age.png);
+    background-repeat:no-repeat;
+	background-position:10px 10px;
+    //background-size:100% 100%;
+    background-origin:content-box;
 	
 }
-#c2_content  img{
-	position:absolute;
-	left:10px;
-	display:inline-block;
-	margin-top:10px;
+#c2_logo3{
+    background:url(../image/location.png);
+    background-repeat:no-repeat;
+	background-position:10px 10px;
+    //background-size:100% 100%;
+    background-origin:content-box;
+	
 }
-#c2_content  img:hover{
-	position:absolute;
-	left:10px;
-	display:inline-block;
-	margin-top:10px;
-	animation:c2_content 1.5s;
+#c2_logo4{
+    background:url(../image/status.png);
+    background-repeat:no-repeat;
+	background-position:10px 10px;
+    //background-size:100% 100%;
+    background-origin:content-box;
+	
 }
 
 #c2_p{

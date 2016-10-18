@@ -36,3 +36,4 @@ setTimeout(
 			)
 		}		
 	}) 
+	$("#btn-demo").on('click',function(){$("#fixdemo").toggle("explode")});

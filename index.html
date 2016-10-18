@@ -15,22 +15,27 @@
 <body class="">
 <header class="border">
     <nav class="navbar " >   
-    <div class="navbar-header " >
+    <div class="navbar-header">
 		<img src="image/logo.png" alt="logo" id="logo">
-        <a class="header-name t1" href="javascript:void(0)"><b>天生赢家-个人简历<b></a> 
+        <span class="header-name t1" >天生赢家-个人简历</span> 
     </div>
     <div>      
         <ul class="nav navbar-nav navbar-right t2">
-			<li><a href="javascript:void(0)">首页</a></li>
-			<li><a href="javascript:void(0)">随便</a></li>
-			<li><a href="javascript:void(0)">积淀</a></li>
-			<li><a href="javascript:void(0)">关于</a></li>
+			<li><a href="./index.html">首页</a></li>
+			<li><a href="javascript:void(0)" data-toggle="modal" data-target="#myModal">专业</a></li>
+			<li><a href="javascript:void(0)" id="btn-demo">模拟</a></li>
+			<li><a href="javascript:void(0)">联系</a></li>
            
         </ul>
         
     </div>
 </nav>
 </header>
+<div id="fixdemo" class="border">
+  <a href="demo/js_demo/index.html"><img src="image/ms.png" alt="">原生DEMO</a>
+  <a href="demo/shop_demo/shop_home.html"><img src="image/20120220.png" alt=""><a href="">网店DEMO</a>
+  <a href="demo/shop_demo/shop_detail.html"><img src="image/yellow.png" alt=""><a href="">详情DEMO</a>
+</div>
 <table id="fixnav">
 	<tr>
 		<td>
@@ -40,6 +45,43 @@
 		</td>
 	</tr>
 </table>
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+					&times;
+				</button>
+				<h4 class="modal-title" id="myModalLabel">
+					专业技能<br>
+					前端的学习需要持之以恒，知识深度与广度都很重要。而前端开发的重中之重就是原生javascript的理解。
+				</h4>
+			</div>
+			<div class="modal-body">				
+				<ul>
+					<li>深刻理解Web标准,熟练运用html标签,熟悉xml及xhtml标记语言,掌握html5如SVG，localstorage新特性</li>
+					<li>熟练运用css及css3新属性,注重浏览器兼容性，熟悉常见的css hack（兼容至IE8）,掌握bootstrap框架及源码的实现,掌握css预编译器Less及Sass</li>
+					<li>掌握jQuery,掌握原生JS的编程,注重JavaScript性能优化</li>
+				</ul>
+				<div id="modal-body-img">
+				<ul class="list-inline" >
+					<li><img src="image/html.png" alt=""></li>
+					<li><img src="image/css.png" alt=""></li>
+					<li><img src="image/js.png" alt=""></li>
+				</ul>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">关闭
+				</button>
+				<!-- <button type="button" class="btn btn-primary">
+					提交更改
+				</button> -->
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal -->
+</div>
 <div id="content1" class="content100 border">
 	<div class="c1 border">
 		<div>
@@ -61,10 +103,10 @@
 			<p id="hr2"></p>
 		</div>		
 		<div id="c2_content" class="border">
-			<a href="javascript:void(0)"><div><img  src="image/education.png"></img></div><p>学历：专科</p></a>
-			<a href="javascript:void(0)"><div><img  src="image/age.png"></img></div><p>年龄：30</p></a>
-			<a href="javascript:void(0)"><div><img  src="image/location.png"></img></div><p>坐标：广州</p></a>
-			<a href="javascript:void(0)"><div><img  src="image/status.png"></img></div><p>状态：在职</p></a>
+			<a href="javascript:void(0)"><div id="c2_logo1"></div><p>学历：专科</p></a>
+			<a href="javascript:void(0)"><div id="c2_logo2"></></div><p>年龄：30</p></a>
+			<a href="javascript:void(0)"><div id="c2_logo3"></></div><p>坐标：广州</p></a>
+			<a href="javascript:void(0)"><div id="c2_logo4"></></div><p>状态：在职</p></a>
 		</div>
 		<div id="c2_p">
 			<p>毕业与广东轻工职业技术学院计算机应用系，现就职于广州远行客运动用品有限公司</p>			
