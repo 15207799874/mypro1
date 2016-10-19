@@ -7,16 +7,16 @@ var gulp=require('gulp'),
 	 
 /* 压缩CSS */
 gulp.task('minifycss',function(){
-	return gulp.src('app/css/*.css')
+	return gulp.src('css/index.css')
 		.pipe(rename({suffix: '.min'})) 
 		.pipe(minifycss())
-		.pipe(gulp.dest('dist/css'))
+		.pipe(gulp.dest('css'))
 })
 gulp.task('minifyjs', function() {
-    return gulp.src('app/js/*.js')        
+    return gulp.src('js/main.js')        
         .pipe(rename({suffix: '.min'}))   //rename压缩后的文件名
         .pipe(uglify())    //压缩
-        .pipe(gulp.dest('dist/js'));  //输出
+        .pipe(gulp.dest('js'));  //输出
 });
 
 gulp.task('clean', function(cb) {

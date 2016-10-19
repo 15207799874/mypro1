@@ -1,7 +1,8 @@
- ;(function(){
+ ;(function(){	
 	var navi=navigator.appVersion.match(/MSIE\s(8.0)/);
 	if(navi&&navi[1]<9){
-		altert("你的浏览器太古老，请使用现代浏览器");
+		alert("你的浏览器太古老，请使用现代浏览器");
+		location.href="html/error1.html";
 	}
 })();
 setTimeout(
