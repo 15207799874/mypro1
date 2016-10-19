@@ -1,0 +1,310 @@
+html, body{
+	background-image:url(../image/bg.jpg);
+	animation:myfirst 3s;
+	animation-timing-function:ease;	
+	-webkit-animation:myfirst 3s;
+	-webkit-animation-timing-function:ease;
+	margin:0; 
+	height:100%;
+	position:relative;	
+	overflow:hidden;
+}
+
+
+header{
+	position: fixed;
+    width: 100%;
+	z-index:100;
+}
+
+.navbar{
+	opacity:1;
+	filter:alpha(opacity=100); /* For IE8 and earlier */
+}
+.t1{
+	display:inline-block;
+	font-size:2em;
+	font-weight:900;
+	color:#7f7f7f;
+	height:55px;
+	line-height:55px;
+	text-shadow: 2px 2px 5px #880000;
+}
+.t2{
+	font-size:1.5em;
+	padding:4px;
+}
+
+/*  .border{
+	border:solid 1px red;
+}  */
+#logo{
+	border-radius:30px;
+	margin-left:30px;
+	vertical-align: bottom;
+}
+#logo:hover{
+	box-shadow: 0px 0px 5px blue;
+}
+
+.nav{
+	margin-right:50px;
+}
+/* 动画 ****************************************************************************/
+@keyframes myfirst
+{
+	from {background-size:1300px 1300px;background-position:-138px 0px;}
+	to {background-size:1024px 1024px;background-position:0px 0px;}
+}
+@-webkit-keyframes myfirst 
+{
+	from {background-size:1300px 1300px;background-position:-138px}
+	to {background-size:1024px 1024px;background-position:0px}
+}
+@keyframes mytwo
+{
+	from {top:100px;}
+	to {top:0px;}
+}
+@-webkit-keyframes mytwo 
+{
+	from {top:40%;}
+	to {top:25%;}
+}
+@keyframes mythree
+{
+	0% {width:0%;}
+	80% {width:0%;}
+	100% {width:40%}
+	
+}
+@-webkit-keyframes mythree
+{
+	0% {width:0%;}
+	80% {width:0%;}
+	100% {width:40%}
+	
+}
+ @keyframes myfour
+{
+	0% {opacity:0;}
+	80% {opacity:0;}
+	100% {opacity:1}	
+}
+@-webkit-keyframes myfour
+{
+	0% {opacity:0;}
+	80% {opacity:0;}
+	100% {opacity:1}	
+} 
+@keyframes hr2
+{
+	from {width:0%;}
+	to{width:15%;}	
+}
+@keyframes c2_logo{
+	0% {background-position:10px}
+	50% {background-position:100px}
+	51% {background-position:-80px}
+	100% {background-position:10px}
+}
+@keyframes rotateY{
+	form {transform: rotateY(0deg); -webkit-transform: rotateY(0deg); }
+	to{transform: rotateY(360deg); -webkit-transform: rotateY(360deg); }
+}
+/* 动画 **********************************************************************/
+#fixnav{
+	position:fixed;
+    display:none;
+	width:50px;
+	height:400px;
+	top:150px;
+	right:50px;	
+	z-index:1000;
+}
+
+#fixdemo{
+	position:fixed;
+    display:none;
+	width:150px;
+    top:150px;
+	left:100px;	
+	z-index:1000;
+	box-shadow: 10px 10px 5px #888888;
+}
+/* ****************modal */
+#modal-body-img{
+	height:120px;
+}
+#modal-body-img li{
+	
+	width:32%;
+	text-align:center;
+}
+#modal-body-img img{
+	width:85px;
+	height:100px;
+	transition: 0.5s; 
+		
+}
+#modal-body-img img:hover{
+	width:100px;
+	height:120px;
+	
+	
+	
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~第一页 */
+.content100{
+	height:100%;
+	width:100%;	
+	position:relative;			
+}
+#content1{
+	animation:mytwo 3s;
+}
+
+#my{
+	border-radius:75px 75px;
+	animation:rotateY 2s;
+	box-sizing: border-box;
+}
+.c1{
+	height: 60%;
+	width: 60%;
+	position: absolute;
+	top: 25%;
+	left: 50%;
+	margin-left:-30%;
+	overflow:hidden;
+	//animation:mytwo 3s;
+}
+.c1 div{	
+	text-align:center;
+	margin:auto;
+	line-height:2em;
+}
+.c1 h3{
+	margin:auto;
+	line-height:3em;
+	animation:myfour 2s;
+}
+
+.hr{
+	margin:auto;
+	width:60%;
+	border:solid 1px gray;
+	animation:mythree 2s;
+}
+.c1 h5{
+	margin:auto;
+	line-height:3em;
+	display:none;
+}
+/* ～～～～～～～～～～～～～～第二页 */
+#content2{
+	display:none;
+}
+#hr2{
+	margin:auto;
+	height:2px;
+	width:15%;
+	background-color:red;	
+	animation:hr2 1s;
+}
+.c2{
+	height:75%;
+	width:50%;
+	position:absolute;
+	top:15%;
+	left:50%;
+	margin-left:-25%;	
+	text-align:center;
+	line-height:2em;
+}
+.c2 h1{
+	text-align:center;
+	margin:auto;	
+}
+
+#c2_content{
+	margin-top:10%;
+	height:30%;
+	border-radius:20px;
+	background-color:#a0a0b4;
+}
+#c2_content a{
+	width:24%;
+	display:inline-block;
+	text-align:center;
+	font-size:1.5em;
+	
+}
+#c2_content div{
+	display:inline-block;
+	position:relative;
+	margin-top:10px;
+	width:80px;
+	height:80px;	
+	box-shadow: 0 0 0 4px rgba(255,255,255,1);
+	border-radius:50%;	
+	transition:1.5s;
+}
+
+#c2_content div:hover{
+	display:inline-block;
+	position:relative;
+	margin-top:10px;
+	width:80px;
+	height:80px;	
+	box-shadow: 0 0 0 4px rgba(150,100,100,1);
+	border-radius:50%;
+	background-color:white;
+	overflow:hidden;
+	animation:c2_logo 1.5s;
+}
+#c2_logo1{
+    background:url(../image/education.png);
+    background-repeat:no-repeat;
+	background-position:10px 10px;
+    //background-size:100% 100%;
+    background-origin:content-box;	
+}
+#c2_logo2{
+    background:url(../image/age.png);
+    background-repeat:no-repeat;
+	background-position:10px 10px;
+    //background-size:100% 100%;
+    background-origin:content-box;
+	
+}
+#c2_logo3{
+    background:url(../image/location.png);
+    background-repeat:no-repeat;
+	background-position:10px 10px;
+    //background-size:100% 100%;
+    background-origin:content-box;
+	
+}
+#c2_logo4{
+    background:url(../image/status.png);
+    background-repeat:no-repeat;
+	background-position:10px 10px;
+    //background-size:100% 100%;
+    background-origin:content-box;
+	
+}
+
+#c2_p{
+	width:100%;
+	height:45%;
+	border:15px solid;
+	border-image:url(../image/border.png) 30 30 round;	
+}
+#c2_p p{
+	line-height:3em;
+	display:none;
+}
+
+
