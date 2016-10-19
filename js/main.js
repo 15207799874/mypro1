@@ -1,10 +1,10 @@
- ;(function(){	
+/*  ;(function(){	
 	var navi=navigator.appVersion.match(/MSIE\s(8.0)/);
 	if(navi&&navi[1]<9){
 		alert("你的浏览器太古老，请使用现代浏览器");
 		location.href="html/error1.html";
 	}
-})();
+})(); */
 setTimeout(
 	function(){
 		$("div.c1 h5").each(function(idx){$(this).fadeIn({duration:500*idx})});	
